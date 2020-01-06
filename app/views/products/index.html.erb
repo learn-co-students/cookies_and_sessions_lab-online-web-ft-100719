@@ -6,6 +6,6 @@
 <% end %>
 
   <h2>Your Cart:</h2>
-  <% @current_cart.each do |item| %>
+  <% session[:cart].each do |item| %>
     <li><%= item %></li>
   <% end %>
