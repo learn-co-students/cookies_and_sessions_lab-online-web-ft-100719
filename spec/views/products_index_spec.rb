@@ -12,7 +12,6 @@ RSpec.describe "products/index", :type => :view do
   end
 
   it "shows everything in the cart" do
-    binding.pry
     session[:cart] = ['apples', 'bananas', 'pears']
     render
     expect(rendered).to include 'apples'
