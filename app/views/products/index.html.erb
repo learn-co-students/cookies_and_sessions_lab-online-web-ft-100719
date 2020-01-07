@@ -1,0 +1,18 @@
+<h1> Current Cart: </h1>
+
+<% session[:cart].each  do |product| %>
+  <%= product %>
+  <br>
+<% end %>
+
+<h3>Add item to cart:</h3>
+<%= form_tag({controller: 'products',
+    action: 'add',
+    method: 'post'}) do %>
+  <%= label_tag :product %>
+  <%= text_field_tag :product %> <br>
+  <%= submit_tag "add to cart" %>
+<% end %>
+  
+
+
