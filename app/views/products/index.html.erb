@@ -1,0 +1,18 @@
+<h1>Your cart</h1>
+
+<h3>Current contents</h3>
+<% if cart %>
+    <% cart.each do |product| %>
+    <p>
+    <%= product %>
+    </p>
+    <% end %>
+<% end  %>
+
+<h1>Add Items To Cart</h1>
+
+<%= form_tag(add_item_path) do %>
+    <%= label_tag :product %>
+    <%= text_field_tag :product %>
+    <%= button_tag "add to cart" %>
+  <% end %>
