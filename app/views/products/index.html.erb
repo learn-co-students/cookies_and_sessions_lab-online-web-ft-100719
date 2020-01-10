@@ -1,0 +1,12 @@
+<ul>
+        <% cart.each do |product| %>
+            <li><%= product %></li>
+        <% end %>
+
+</ul>
+
+<%= form_tag({:method => 'post', :action => 'add', :controller => 'products'}) do  %>
+    <label name=product>
+    <input name=product>
+    <input type=submit value="add to cart">
+<% end %>
